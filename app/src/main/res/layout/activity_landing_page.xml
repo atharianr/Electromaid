@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white"
+    tools:context=".LandingPage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:textSize="30dp"
+        android:fontFamily="@font/medium"
+        android:layout_margin="50dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/electromaid_logo"
+        />
+
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="262dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundedbox_darkgreen"
+        android:text="Sign In"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        />
+    <RelativeLayout
+        android:layout_width="262dp"
+        android:layout_height="27.5dp"
+        android:layout_margin="5dp">
+        <ImageView
+            android:layout_width="235dp"
+            android:layout_height="0.5dp"
+            android:src="@drawable/kotak_gray"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:text="or"
+            android:textAllCaps="false"
+            android:textColor="@android:color/darker_gray"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="262dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundedbox_white_outlinegreen"
+        android:text="Sign Up"
+        android:textColor="#28a745"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"
+        />
+</LinearLayout>

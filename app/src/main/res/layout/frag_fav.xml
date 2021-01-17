@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme">
+
+    <RelativeLayout
+        android:id="@+id/info_box"
+        android:layout_width="325dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedbox_white"
+        android:elevation="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/device_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2"
+            android:textSize="55dp" />
+
+        <TextView
+            android:id="@+id/device_monitored_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/device_count"
+            android:text="Device(s)\nMonitored"
+            android:textSize="19dp" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@id/device_monitored_text">
+
+            <ImageView
+                android:id="@+id/electric_asset"
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/electric" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/electric_asset">
+
+                <TextView
+                    android:id="@+id/electric_usage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+
+                    android:text="27.9"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/total_power_usage"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_toEndOf="@+id/electric_usage"
+                    android:text="kwh"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/total_power_usage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/electric_usage"
+                    android:layout_marginLeft="5dp"
+                    android:text="Total Power Usage"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/main_top_asset"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/electromaid_type_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="50dp"
+            android:text="Halo, Atharian R!"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="110dp"
+        android:layout_height="145dp"
+        android:layout_below="@id/info_box"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="45dp"
+        >
+        <Button
+            android:id="@+id/device_1"
+            android:layout_width="110dp"
+            android:layout_height="145dp"
+            android:background="@android:color/transparent"
+            />
+        <TextView
+            android:id="@+id/device_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Device A"
+            android:textSize="19dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="115 watt"
+            android:textSize="11dp"
+            android:layout_marginTop="100dp"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

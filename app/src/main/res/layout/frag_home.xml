@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/AppTheme">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/box_darkgreen"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/electromaid_type_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="50dp"
+            android:text="Halo, Selamat Datang!"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <LinearLayout
+                    android:layout_width="325dp"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/roundedbox_white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="110dp"
+                    android:elevation="5dp"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/device_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textSize="55dp"
+                            android:fontFamily="@font/semibold"
+                            android:layout_margin="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Device(s)\nMonitored"
+                            android:textSize="15dp"
+                            android:layout_margin="5dp"/>
+
+                        <ImageView
+                            android:layout_width="1dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/kotak_gray"
+                            android:layout_margin="10dp"/>
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/electric"
+                            android:layout_margin="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/usage_wh"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="27.9"
+                                    android:textSize="15dp"
+                                    android:layout_marginRight="2.5dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wh"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="IDR"
+                                    android:textSize="10dp"
+                                    android:layout_marginRight="2.5dp"/>
+
+                                <TextView
+                                    android:id="@+id/usage_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1000000"
+                                    android:textSize="15dp"/>
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/total_power_usage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/electric_usage"
+                                android:text="Total Power Usage"
+                                android:textSize="10dp"
+                                android:layout_marginTop="2dp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ToggleButton
+                        android:id="@+id/btn_expand"
+                        android:layout_width="75px"
+                        android:layout_height="17.4783px"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/toggle_expand_selector"
+                        android:layout_marginTop="10dp"
+                        android:textOn=""
+                        android:textOff=""
+                        android:text=""
+                        />
+
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expand_layout"
+                    android:layout_width="325dp"
+                    android:layout_height="400dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/roundedboxbottom_white"
+                    android:elevation="5dp"
+                    android:layout_marginTop="260dp"
+                    android:layout_marginBottom="50dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Device Usage"
+                            android:layout_marginTop="25dp"/>
+
+                        <com.anychart.AnyChartView
+                            android:id="@+id/pie_chart"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            />
+                    </LinearLayout>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_device_0"
+                    android:layout_width="110dp"
+                    android:layout_height="145dp"
+                    android:layout_below="@id/info_box"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginBottom="45dp"
+                    android:transitionName="example_transition"
+                    >
+                    <Button
+                        android:id="@+id/device_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        />
+                    <TextView
+                        android:id="@+id/device_id0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Device A"
+                        android:textAlignment="center"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/daya_device0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="115 watt"
+                        android:textAlignment="center"
+                        android:textSize="11dp"
+                        android:layout_marginTop="100dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_device_1"
+                    android:layout_width="110dp"
+                    android:layout_height="145dp"
+                    android:layout_below="@id/info_box"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginBottom="45dp"
+                    android:transitionName="example_transition"
+                    >
+                    <Button
+                        android:id="@+id/device_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        />
+                    <TextView
+                        android:id="@+id/device_id1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Device A"
+                        android:textAlignment="center"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/daya_device1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="115 watt"
+                        android:textAlignment="center"
+                        android:textSize="11dp"
+                        android:layout_marginTop="100dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_device_2"
+                    android:layout_width="110dp"
+                    android:layout_height="145dp"
+                    android:layout_below="@id/info_box"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginBottom="45dp"
+                    android:transitionName="example_transition"
+                    >
+                    <Button
+                        android:id="@+id/device_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        />
+                    <TextView
+                        android:id="@+id/device_id2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Device A"
+                        android:textAlignment="center"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/daya_device2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="115 watt"
+                        android:textAlignment="center"
+                        android:textSize="11dp"
+                        android:layout_marginTop="100dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_device_3"
+                    android:layout_width="110dp"
+                    android:layout_height="145dp"
+                    android:layout_below="@id/info_box"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginBottom="45dp"
+                    android:transitionName="example_transition"
+                    >
+                    <Button
+                        android:id="@+id/device_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        />
+                    <TextView
+                        android:id="@+id/device_id3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Device A"
+                        android:textAlignment="center"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/daya_device3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="115 watt"
+                        android:textAlignment="center"
+                        android:textSize="11dp"
+                        android:layout_marginTop="100dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_device_4"
+                    android:layout_width="110dp"
+                    android:layout_height="145dp"
+                    android:layout_below="@id/info_box"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginBottom="45dp"
+                    android:transitionName="example_transition"
+                    >
+                    <Button
+                        android:id="@+id/device_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        />
+                    <TextView
+                        android:id="@+id/device_id4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Device A"
+                        android:textAlignment="center"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/daya_device4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="115 watt"
+                        android:textAlignment="center"
+                        android:textSize="11dp"
+                        android:layout_marginTop="100dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_device_5"
+                    android:layout_width="110dp"
+                    android:layout_height="145dp"
+                    android:layout_below="@id/info_box"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginBottom="45dp"
+                    android:transitionName="example_transition"
+                    >
+                    <Button
+                        android:id="@+id/device_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        />
+                    <TextView
+                        android:id="@+id/device_id5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Device A"
+                        android:textAlignment="center"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/daya_device5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="115 watt"
+                        android:textAlignment="center"
+                        android:textSize="11dp"
+                        android:layout_marginTop="100dp"/>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/AppTheme"
+    android:id="@+id/swipe_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom_bar">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/box_darkgreen"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/electromaid_logo_type"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Halo, Selamat Datang!"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+                        <LinearLayout
+                            android:layout_width="325dp"
+                            android:layout_height="180dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/roundedbox_white"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="110dp"
+                            android:elevation="5dp"
+                            android:gravity="center_horizontal">
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/device_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="55dp"
+                                    android:fontFamily="@font/semibold"
+                                    android:layout_margin="5dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Device(s)\nMonitored"
+                                    android:textSize="15dp"
+                                    android:layout_margin="5dp"/>
+
+                                <ImageView
+                                    android:layout_width="1dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/kotak_gray"
+                                    android:layout_margin="10dp"/>
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/electric"
+                                    android:layout_margin="5dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_margin="5dp">
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:id="@+id/usage_wh"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0"
+                                            android:textSize="15dp"
+                                            android:layout_marginRight="2.5dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Wh"
+                                            android:textSize="10dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="IDR"
+                                            android:textSize="10dp"
+                                            android:layout_marginRight="2.5dp"/>
+
+                                        <TextView
+                                            android:id="@+id/usage_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0"
+                                            android:textSize="15dp"/>
+                                    </LinearLayout>
+
+
+                                    <TextView
+                                        android:id="@+id/total_power_usage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/electric_usage"
+                                        android:text="Total Power Usage"
+                                        android:textSize="10dp"
+                                        android:layout_marginTop="2dp"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <ToggleButton
+                                android:id="@+id/btn_expand"
+                                android:layout_width="75px"
+                                android:layout_height="17.4783px"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/toggle_expand_selector"
+                                android:layout_marginTop="10dp"
+                                android:textOn=""
+                                android:textOff=""
+                                android:text=""
+                                />
+                        </LinearLayout>
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/expand_layout"
+                            android:layout_width="325dp"
+                            android:layout_height="400dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/roundedboxbottom_white"
+                            android:elevation="5dp"
+                            android:layout_marginTop="260dp"
+                            android:layout_marginBottom="50dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Device Usage"
+                                    android:layout_marginTop="25dp"/>
+
+                                <com.anychart.AnyChartView
+                                    android:id="@+id/pie_chart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="300dp"
+                                    />
+                            </LinearLayout>
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                    </RelativeLayout>
+                    
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/device_recyclerview"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="325dp"
+                        android:layout_height="match_parent"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:background="@android:color/transparent">
+                <Button
+                    android:layout_width="30.72dp"
+                    android:layout_height="24.72dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/home_dark"/>
+                <Button
+                    android:id="@+id/btn_notif_page"
+                    android:layout_width="21.63dp"
+                    android:layout_height="27.81dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/notification_grey"/>
+                <Button
+                    android:id="@+id/btn_setting_page"
+                    android:layout_width="27.81dp"
+                    android:layout_height="27.81dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/settings_grey"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

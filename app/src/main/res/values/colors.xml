@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8BA989</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#C0CFB2</color>
+    <color name="colorForNotifBar">#198057</color>
+</resources>

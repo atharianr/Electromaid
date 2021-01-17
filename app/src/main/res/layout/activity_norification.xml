@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/electromaid_logo_type_black" />
+
+    <TextView
+        android:id="@+id/notificationn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/medium"
+        android:text="Notification"
+        android:textSize="22dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notif_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notificationn"
+        android:layout_above="@id/bottom_bar"
+        android:layout_marginTop="10dp" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/no_notification_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/notification_outline" />
+
+        <TextView
+            android:id="@+id/tv_empty_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_notification_icon"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/medium"
+            android:text="It's still empty in here!"
+            android:textColor="#9EA29F" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@android:color/transparent">
+
+            <Button
+                android:id="@+id/btn_home_page"
+                android:layout_width="30.72dp"
+                android:layout_height="24.72dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/home_grey" />
+
+            <Button
+                android:layout_width="21.63dp"
+                android:layout_height="27.81dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/notification_dark" />
+
+            <Button
+                android:layout_width="27.81dp"
+                android:layout_height="27.81dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/settings_grey" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
